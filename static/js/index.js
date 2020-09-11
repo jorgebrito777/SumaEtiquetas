@@ -4,7 +4,7 @@ function Suma() {
 	var x, y;
 	x="5000";
 	y="3000";
-	message = new Paho.MQTT.Message("S"+" "+ x +" "+ y );
+	message = new Paho.MQTT.Message("Suma"+" "+ x +" "+ y );
     message.destinationName = "jorgebito777@gmail.com/RASP";
     client.send(message);
 	
@@ -13,7 +13,7 @@ function Resta(){
 	var x, y;
 	x="5000";
 	y="3000";
-	message = new Paho.MQTT.Message("R"+" "+ x +" "+ y );
+	message = new Paho.MQTT.Message("Resta"+" "+ x +" "+ y );
     message.destinationName = "jorgebito777@gmail.com/RASP";
     client.send(message);
 	
@@ -66,6 +66,6 @@ function Resta(){
   function onMessageArrived(message) {
      text=(message.payloadString);
 	 console.log(text)
-	 document.getElementById("respuesta").innerHTML = text;
+	 document.getElementById("resultado").innerHTML = text;
   }
   
