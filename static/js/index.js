@@ -66,6 +66,6 @@ function Resta(){
   function onMessageArrived(message) {
      text=(message.payloadString);
 	 console.log(text)
-	 document.getElementById("resultado").innerHTML = text;
+	 document.getElementById("respuesta").innerHTML = text;
   }
   
